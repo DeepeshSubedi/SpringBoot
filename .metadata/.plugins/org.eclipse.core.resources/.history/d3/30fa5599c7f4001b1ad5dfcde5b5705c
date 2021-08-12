@@ -1,0 +1,49 @@
+package com.deepesh.flightreservation.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.deepesh.flightreservation.dto.ReservationRequest;
+import com.deepesh.flightreservation.entities.Flight;
+import com.deepesh.flightreservation.entities.Passanger;
+import com.deepesh.flightreservation.entities.Reservation;
+import com.deepesh.flightreservation.repos.FlightRepository;
+import com.deepesh.flightreservation.repos.PassengerRepository;
+import com.deepesh.flightreservation.repos.ReservationRepository;
+
+@Service
+public class ReservationServiceImpl implements ReservationService {
+	@Autowired
+	FlightRepository flightRepos;
+	
+	@Autowired
+	PassengerRepository passengerRepos;
+	@Autowired
+	ReservationRepository reservationRepos;
+	
+	
+	
+	public Reservation bookFlight(ReservationRequest request) {
+		// make payment 
+		
+		Long flightId = request.getFlightId();
+		Flight flight = flightRepos.findById(flightId).get();
+		
+		Passanger passenger=new Passanger();
+		passenger.setFirstName(request.getPassengerFirstName());
+		passenger.setLastName(request.getPassengerLastName());
+		passenger.setPhone(request.getPassengerPhone());
+		passenger.setEmail(request.getPassengerEmail());
+		Passanger savedPassenger = passengerRepos.save(passenger);
+		
+		Reservation reservation=new Reservation();
+		reservation.setFlight(flight);
+		reservation.setPassenger(savedPassenger);
+		reservation.setCheckedIn(false);
+		
+		Reservation savedReservation = reservationRepos.save(reservation);
+		
+		return savedReservation;
+	}
+
+}

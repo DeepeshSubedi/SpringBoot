@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>All Vendors List:</h2>
+<table>
+<tr>
+<th>Id</th>
+<th>Code</th>
+<th>Name</th>
+<th>Type</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Address</th>
+</tr>
+<tr th:each="allVendors:${allVendors}">
+<td th:text="${allVendors.id}"></td>
+<td th:text="${allVendors.code}"></td>
+<td th:text="${allVendors.name}"></td>
+<td th:text="${allVendors.type}"></td>
+<td th:text="${allVendors.email}"></td>
+<td th:text="${allVendors.phone}"></td>
+<td th:text="${allVendors.address}"></td>
+
+<td><a th:href="@{'deleteVendor?id='+${allVendors.id }}">delete</a></td>
+<td><a th:href="@{'showUpdate?id='+${allVendors.id }}">update</a></td>
+</tr>
+
+
+</table>
+<a href="showCreate">Add new Vendor</a>
+</body>
+</html>

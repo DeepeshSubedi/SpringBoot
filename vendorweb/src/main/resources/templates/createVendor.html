@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create Vendor</title>
+</head>
+<body>
+<form action="saveVen" method="post">
+
+<pre>
+Id:<input type="text" name="id"/>
+Code:<input type="text" name="code"/>
+Name:<input type="text" name="name"/>
+Type: Regular<input type="radio" name="type" value="Regular"/>
+	Contract<input type="radio" name="type" value="Contract"/>
+Email:<input type="text" name="email"/>
+Phone:<input type="text" name="phone"/>
+Address:<input type="text" name="address"/>
+<input type="submit" value="save" />
+</pre>
+</form>
+<b th:text="${msg}"></b>
+<a href="displayVendors">View All Vendors</a>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.deepesh.flightreservation.entities;
+
+public class Role {
+
+}

@@ -1,0 +1,9 @@
+package com.deepesh.flightcheckin.integration;
+
+public interface ReservationRestClient {
+	
+	public Reservation findReservation(long id);
+	
+	public Reservation updateReservation();
+
+}

@@ -1,0 +1,5 @@
+1628046531398	Delete elements
+1628047146223	Delete element
+1628047795987	Extract constant 'HTTP_LOCALHOST_8080_FLIGHTRESERVATION_RESERVATIONS'
+1628048259594	Rename resource 'checkIn.html'
+1628057535385	Extract local variable 'request'

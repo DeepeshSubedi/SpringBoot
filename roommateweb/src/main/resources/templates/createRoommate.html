@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title> Create Room mate</title>
+</head>
+<body>
+<form action="saveRoom" method="post">
+
+<pre>
+Id:<input type="text" name="id"/>
+Name:<input type="text" name="name"/>
+Gender: Male<input type="radio" name="gender" value="Male"/>
+	Female<input type="radio" name="gender" value="Female"/>
+Phone:<input type="text" name="phone"/>
+<input type="submit" value="save" />
+</pre>
+</form>
+<b th:text="${msg}"></b>
+<a href="displayRoommates">View All Room mates</a>
+</body>
+</html>

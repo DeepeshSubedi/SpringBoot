@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>All Room mates List:</h2>
+<table>
+<tr>
+<th>Id</th>
+
+<th>Name</th>
+<th>Gender</th>
+
+<th>Phone</th>
+
+</tr>
+<tr th:each="allRoommates:${allRoommates}">
+<td th:text="${allRoommates.id}"></td>
+<td th:text="${allRoommates.name}"></td>
+<td th:text="${allRoommates.gender}"></td>
+<td th:text="${allRoommates.phone}"></td>
+<td><a th:href="@{'deleteRoommate?id='+${allRoommates.id }}">delete</a></td>
+<td><a th:href="@{'showUpdate?id='+${allRoommates.id }}">update</a></td>
+</tr>
+
+
+</table>
+<a href="showCreate">Add new Room mate</a>
+</body>
+</html>

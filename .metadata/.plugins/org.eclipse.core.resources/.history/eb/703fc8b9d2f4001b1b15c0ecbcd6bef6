@@ -1,0 +1,19 @@
+package com.deepesh.flightcheckin.integration;
+
+import com.deepesh.flightcheckin.integration.dto.Reservation;
+import com.deepesh.flightcheckin.integration.dto.ReservationUpdateRequest;
+
+public class ReservationRestClientImpl implements ReservationRestClient {
+
+
+	public Reservation findReservation(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Reservation updateReservation(ReservationUpdateRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

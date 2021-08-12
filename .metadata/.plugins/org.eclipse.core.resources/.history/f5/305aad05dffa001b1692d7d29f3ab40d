@@ -1,0 +1,5 @@
+package com.deepesh.employee.model;
+
+public class Employee {
+
+}

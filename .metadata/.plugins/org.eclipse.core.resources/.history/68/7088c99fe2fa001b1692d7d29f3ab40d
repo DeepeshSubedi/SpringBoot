@@ -1,0 +1,5 @@
+package com.deepesh.employee.controller;
+
+public class EmployeeRESTController {
+
+}

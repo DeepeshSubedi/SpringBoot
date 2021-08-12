@@ -1,0 +1,5 @@
+package com.deepesh.clinicals.controllers;
+
+public class PatientController {
+
+}

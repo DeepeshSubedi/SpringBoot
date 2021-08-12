@@ -1,0 +1,5 @@
+package com.deepesh.flightreservation.dto;
+
+public class ReservationUpdateRequest {
+
+}

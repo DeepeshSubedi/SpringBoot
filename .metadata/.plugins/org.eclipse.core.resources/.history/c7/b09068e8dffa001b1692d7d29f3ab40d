@@ -1,0 +1,6 @@
+package com.deepesh.employee.model;
+
+@Controller
+public class EmployeeController {
+
+}

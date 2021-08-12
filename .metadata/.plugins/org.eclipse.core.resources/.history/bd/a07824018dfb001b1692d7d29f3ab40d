@@ -1,0 +1,11 @@
+package com.deepesh.employeeapi.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.deepesh.employeeapi.entities.Employee;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+
+	Employee save(Employee employee);
+
+}

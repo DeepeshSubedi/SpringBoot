@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="updateRoom" method="post">
+<pre>
+Id:<input type="text" name="id" th:value="${roommate.id }" readonly/>
+Name:<input type="text" name="name"th:value="${roommate.name}"/>
+Gender: Male<input type="radio" name="gender" value="Male" th:field="*{roommate.gender}"/>
+	Female<input type="radio" name="gender" value="Female" th:field="*{roommate.gender}"/>
+
+Phone:<input type="text" name="phone"th:value="${roommate.phone}"/>
+
+<input type="submit" value="save" />
+</pre>
+</form>
+</body>
+</html>

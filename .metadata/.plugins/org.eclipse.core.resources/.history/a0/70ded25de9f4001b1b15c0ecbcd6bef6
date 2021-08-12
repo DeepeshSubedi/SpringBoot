@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Flight Details:</h2>
+
+Airlines: <td th:text="${reservation.flight.operatingAirlines}"></td><br/>
+Flight No: <td th:text=${reservation.flight.flightNumber}></td><br/>
+Departure City: <td th:text=${reservation.flight.departureCity}></td><br/>
+Arrival City: <td th:text=${reservation.flight.arrivalCity}></td><br/>
+Date Of Departure:<td th:text= ${reservation.flight.dateOfDeparture}></td><br/>
+Estimate Departure Time: <td th:text=${reservation.flight.estimatedDepartureTime}></td><br/>
+
+<h2>Passenger Details</h2>
+
+First Name:<td th:text= ${reservation.passenger.firstName}></td><br/>
+Last Name: <td th:text=${reservation.passenger.lastName}></td><br/>
+Email : <td th:text=${reservation.passenger.email}></td><br/>
+Phone: <td th:text=${reservation.passenger.phone}></td><br/>
+
+<form action="completeCheckIn" method="post">
+Enter the Number Of Bags You want to check in: <input type="text" name="numberOfBags"/>
+<input type="hidden" value="th:text=${reservation.id}" name="reservationId"/>
+<input type="submit" value="Check In"/>
+
+
+</form>
+</body>
+</html>

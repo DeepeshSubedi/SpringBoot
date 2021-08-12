@@ -1,0 +1,5 @@
+package com.deepesh.clinicals.dto;
+
+public class ClinicalDataRequest {
+
+}

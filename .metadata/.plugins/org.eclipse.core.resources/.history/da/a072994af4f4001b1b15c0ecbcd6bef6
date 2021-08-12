@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>CheckIn Application</title>
+</head>
+<body>
+<h2>Welcome to the flight checkin application</h2>
+ click here to start Checkin- <a th:href="startCheckIn">CheckIn</a><br/>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.deepesh.clinicals.util;
+
+public class BMICalculator {
+
+}

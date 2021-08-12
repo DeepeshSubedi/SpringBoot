@@ -1,0 +1,5 @@
+package com.deepesh.flightcheckin.integration;
+
+public interface ReservationRestClient {
+
+}

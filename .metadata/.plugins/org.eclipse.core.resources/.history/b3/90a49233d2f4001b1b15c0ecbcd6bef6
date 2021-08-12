@@ -1,0 +1,5 @@
+package com.deepesh.flightcheckin.integration.dto;
+
+public class Flight {
+
+}
